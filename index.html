@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // 순서가 필요할 때 []를 쓸 줄 아는가
+    // 항목이 필요할 때 {}를 쓸 줄 아는가
+    // . []를 사용하여 객체에 접근할 수 있는가
+    let start = {
+      at : "home",
+      order : ["wakeUp", "shower", "wearCloth", "goOut"],
+      wakeUp : {
+        time : "7시 27분"
+      },
+      shower : {
+        time : "7시 30분"
+      },
+      wearCloth : {
+        time : "8시 00분"
+      },
+      goOut : {
+        time : "8시 05분"
+      }
+    };
+    let inProgress = {
+      at : "bus",
+      order : ["rideBus", "lookNotion", "outBus"],
+      rideBus : {
+        time : "8시 15분"
+      },
+      lookNotion : {
+        time : "8시 20분"
+      },
+      outBus : {
+        time : "8시 45분"
+      }
+    };
+    let end = {
+      at: "academy",
+      order : ["arriveAcademy", "checkNotion", "readyClass", "eatLunch","goHome", "eatDinner", "addStudy", "readySleep", "sleep"],
+      arriveAcademy : {
+        time : "8시 50분"
+      },
+      checkNotion : {
+        time : "8시 55분"
+      },
+      readyClass : {
+        time : "9시 10분"
+      },
+      eatLunch : {
+        time : "13시 10분"
+      },
+      goHome : {
+        time : "18시 5분"
+      },
+      eatDinner : {
+        time : "19시 00분"
+      },
+      addStudy : {
+        time : "20시 30분"
+      },
+      readySleep : {
+        time : "22시 30분"
+      },
+      sleep : {
+        time : "23시 30분"
+      }
+    };
+    // for (let i = 0; i < lifeCycle.length; i++) {
+    //   for (let j = 0; j < order.length; j++) {
+        
+    //   }
+    // }
+    // console.log(lifeCycle[i].order[j] + " 시간 : ");
+    //배열안에 객체도 들어올 수 있다.
+    let lifeCycle = [start, inProgress, end];
+
+    console.dir(lifeCycle);
+    console.log(lifeCycle);
+    console.log("●장소 : " + lifeCycle[0].at);
+    console.log("●순서 : " + lifeCycle[0].order);
+    console.log(lifeCycle[0].order[0] + " 시간 : " + lifeCycle[0].wakeUp.time);
+    console.log(lifeCycle[0].order[1] + " 시간 : " + lifeCycle[0].shower.time);
+    console.log(lifeCycle[0].order[2] + " 시간 : " + lifeCycle[0].wearCloth.time);
+    console.log(lifeCycle[0].order[3] + " 시간 : " + lifeCycle[0].goOut.time);
+    console.log("●장소 : " + lifeCycle[1].at);
+    console.log("●순서 : " + lifeCycle[1].order);
+    console.log(lifeCycle[1].order[0] + " 시간 : " + lifeCycle[1].rideBus.time);
+    console.log(lifeCycle[1].order[1] + " 시간 : " + lifeCycle[1].lookNotion.time);
+    console.log(lifeCycle[1].order[2] + " 시간 : " + lifeCycle[1].outBus.time);
+    console.log("●장소 : " + lifeCycle[2].at);
+    console.log("●순서 : " + lifeCycle[2].order);
+    console.log(lifeCycle[2].order[0] + " 시간 : " + lifeCycle[2].arriveAcademy.time);
+    console.log(lifeCycle[2].order[1] + " 시간 : " + lifeCycle[2].checkNotion.time);
+    console.log(lifeCycle[2].order[2] + " 시간 : " + lifeCycle[2].readyClass.time);
+    console.log(lifeCycle[2].order[3] + " 시간 : " + lifeCycle[2].eatLunch.time);
+    console.log(lifeCycle[2].order[4] + " 시간 : " + lifeCycle[2].goHome.time);
+    console.log(lifeCycle[2].order[5] + " 시간 : " + lifeCycle[2].eatDinner.time);
+    console.log(lifeCycle[2].order[6] + " 시간 : " + lifeCycle[2].addStudy.time);
+    console.log(lifeCycle[2].order[7] + " 시간 : " + lifeCycle[2].readySleep.time);
+    console.log(lifeCycle[2].order[8] + " 시간 : " + lifeCycle[2].sleep.time);
+  </script>
+</body>
+</html>
